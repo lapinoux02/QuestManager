@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#353333" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Quester</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./app.css?version=4" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=Lumanosimo&display=swap" rel="stylesheet">
+	<!-- Libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+	<!-- app -->
+</head>
+<body>
+	<div id="app">
+		<div class="quest-title">{{title}}</div>
+		<div class="quest-step">
+			<img v-if="step.img" :src="step.img">
+			<div>{{step.description}}</div>
+		</div>
+		<div class="quest-navigation">
+			<div class="nav nav-left" @touchstart="journeyBack"><span class="material-symbols-outlined">navigate_before</span></div>
+			<div class="nav-validation">
+				<input type="text" class="validation-inut" v-model="validationInput">
+				<div class="validation-button" @touchstart="validate"><span class="material-symbols-outlined">check</span></div>
+			</div>
+			<div class="nav nav-right" @touchstart="journeyForward"><span class="material-symbols-outlined">navigate_next</span></div>
+		</div>
+	</div>
+</body>
+<script src="./app.js?version=1"></script>
+</html>

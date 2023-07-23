@@ -1,0 +1,71 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overscroll-behavior: contain;
+	font-family: Lumanosimo, sans-serif;
+}
+
+#app {
+	width: 100vw;
+	height: 100svh;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 500px;
+	margin: auto;
+}
+
+.quest-title {
+	font-weight: bold;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.quest-step {
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.quest-step img {
+	width: 100%;
+}
+
+.quest-navigation {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.quest-navigation .nav {
+	width: 20px;
+	height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quest-navigation .nav-validation {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.quest-navigation .nav-validation input {
+  width: 80px;
+  font-family: 'DM Mono';
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.quest-navigation .nav-validation .validation-button {
+
+}
