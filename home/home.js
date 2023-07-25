@@ -30,7 +30,7 @@ Vue.component('home', {
 			}
 		},
 		getQuetsFromLocalStorage() {
-			return Object.keys(localStorage).map(key => ({...JSON.parse(localStorage.getItem(key)), id: key}))
+			return Object.keys(localStorage).map(key => ({...JSON.parse(localStorage.getItem(key)), id: key})).filter(object => object.title && object.journey && object.steps)
 		}
 	}
 })
